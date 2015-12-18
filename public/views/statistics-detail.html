@@ -1,0 +1,128 @@
+<div class="container">
+
+   <div class="row">
+      <h1>Statistic details for service: <strong>{{ statistic[0].key }}</strong></h1>
+      <p>Check here statistics for a specific service.</p>
+      <p></p>
+   </div>
+   
+   <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-heading">Configuration</div>
+        <div class="panel-body">
+          <p><strong>Endpoint</strong>: {{ service[0].value }}</p> 
+          <p><strong>Cache TTL</strong>: {{ service[0].ttl }} ms</p>
+        </div>
+      </div>
+   </div>
+
+   <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-heading">Counters</div>
+        <div class="panel-body">
+
+        <p>Total requests: {{ statistic[0].total }} </p>
+
+        <!-- box1 -->
+        <div class="col-lg-2">
+            <div class="panel panel-green">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-12 text-right">
+                            <div class="huge">{{ statistic[0].cacheNum }}</div>
+                            <div>Num of Cache responses</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- box2 -->
+        <div class="col-lg-2">
+            <div class="panel panel-green">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-12 text-right">
+                            <div class="huge">{{ statistic[0].cacheAvgTime }} ms</div>
+                            <div>Cache AVG response time</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+
+        <!-- box3 -->
+        <div class="col-lg-2">
+            <div class="panel panel-green">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-12 text-right">
+                            <div class="huge">{{ statistic[0].cacheBestTime }} ms</div>
+                            <div>Cache Best response time</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+
+        <!-- box4 -->
+        <div class="col-lg-2">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-12 text-right">
+                            <div class="huge">{{ statistic[0].noCacheNum }}</div>
+                            <div>Num of No-Cache responses</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- box5 -->
+        <div class="col-lg-2">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-12 text-right">
+                            <div class="huge">{{ statistic[0].noCacheAvgTime }} ms</div>
+                            <div>No-Cache AVG response time</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+
+        <!-- box6 -->
+        <div class="col-lg-2">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-12 text-right">
+                            <div class="huge">{{ statistic[0].noCacheBestTime }} ms</div>
+                            <div>No-Cache best response time</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+
+        </div><!-- ./panel-body -->
+      </div><!-- ./panel panel-default -->
+   </div><!-- ./row -->
+
+   <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-heading">Charts</div>
+        <div class="panel-body">
+
+        <canvas id="line" class="chart chart-bar" chart-data="data"
+            chart-labels="labels" chart-legend="true" chart-series="series"
+            chart-click="onClick" >
+        </canvas>
+
+        </div>
+      </div>
+   </div>
+   
+</div>

@@ -1,0 +1,73 @@
+<div class="container">
+
+   <div class="row">
+      <h1>Run</h1>
+      <p>Use this page to call configured services.</p>
+      <p></p>
+   </div>
+
+   <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-heading">How does it works?</div>
+        <div class="panel-body">
+
+         <ol>
+            <li>Step1: Choose a Service</li>
+            <li>Step2: If Service include parameters, fill them all.</li>
+            <li>Step3: Click "Run".</li>
+         </ol>
+
+        </div>
+      </div>
+   </div>        
+
+   <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-heading">Run</div>
+        <div class="panel-body">
+
+         <div class="row">
+           <div class="col-lg-10">
+             <div class="input-group">
+               <div class="input-group-btn">
+                  <button type="button" 
+                     class="btn btn-primary" 
+                     data-toggle="dropdown" 
+                     aria-hashpopop="true" 
+                     aria-expanded="false">
+                  Choose a Service <span class="caret"></span></button>
+                  <ul class="dropdown-menu" >
+                     <li ng-repeat="item in services ">
+                        <a ng-click="onServiceSelection(item)">{{ item.key }}</a>
+                     </li>
+                  </ul>
+               </div>
+               
+               <input type="text" 
+                  class="form-control" 
+                  placeholder="This is the proxy url" 
+                  aria-describedby="sizing-addon3"
+                  value="{{ runUrl }}"
+                  >
+               </input>
+
+             </div>
+           </div><!-- /.col-lg-6 -->
+           
+           <div class="col-lg-2">
+
+            <button type="button" 
+               class="btn btn-primary"
+               ng-click="run();" >
+               <span class="glyphicon glyphicon-play" aria-hidden="true">
+               </span> Run </button>
+
+           </div><!-- /.col-lg-2 -->
+         </div><!-- /.row -->
+
+        </div>
+      </div>
+   </div>
+
+</div>
+ 

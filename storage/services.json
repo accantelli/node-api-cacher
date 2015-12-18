@@ -1,0 +1,4 @@
+{"key":"JSON1","type":"http","value":"http://localhost:3000/json/test1.json","resultType":"auto","ttl":"500","_id":"i5qZvGxZpEYTaazk"}
+{"key":"JSON2","type":"http","value":"http://localhost:3000/json/test2.json","resultType":"auto","ttl":"1000","_id":"xQCG4hZmU180POXS"}
+{"key":"SVC1","type":"http","value":"http://localhost:3000/json/test1.json","resultType":"auto","ttl":"500","_id":"i5qZvGxZpEYTaazk"}
+{"key":"SVC2","type":"http","value":"http://localhost:3000/json/test2.json","resultType":"auto","ttl":"1000","_id":"xQCG4hZmU180POXS"}

@@ -1,0 +1,67 @@
+<div class="container">
+
+   <div class="row">
+      <h1>Statistics</h1>
+      <p>Check here performance and statistics.</p>
+      <p></p>
+   </div>
+
+   <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-heading">Data</div>
+        <div class="panel-body">
+        
+        <table class="table table-striped table-condensed table-bordered table-responsive">
+          <thead>
+             <tr>
+                <th>key</th>
+                <th>#requests</th>
+                <th>#cache</th>
+                <th>cache best/avg response (ms)</th>
+                <th>#no-cache</th>
+                <th>no-cache best/avg response (ms)</th>
+                <th>first call (GMT)</th>
+                <th>last call (GMT)</th>
+                <th>edit</th>       
+             </tr>
+          </thead>
+          <tbody>
+             <tr ng-show="!statistics.length"><td colspan="8">No items yet :(</td></tr>
+             <tr ng-repeat="s in statistics " >
+                <td><a href="#/statistics/{{ s.key }}">{{ s.key }}</a></td>
+                <td>{{ s.total }}</td>
+                <td>{{ s.cacheNum }}</td>
+                <td>{{ s.cacheBestTime }} / {{ s.cacheAvgTime }}</td>
+                <td>{{ s.noCacheNum }}</td>
+                <td>{{ s.noCacheBestTime }} / {{ s.noCacheAvgTime }}</td>
+                <td>{{ s.firstCallDate }}</td>
+                <td>{{ s.lastCallDate }}</td>
+                <td>
+                <button type="button" 
+                 class="btn btn-xs btn-primary"
+                 ng-click="reset(s);" >reset <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
+                </td>
+
+             </tr>
+          </tbody>
+        </table>
+
+        </div>
+      </div>
+   </div>
+
+   <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-heading">Configuration</div>
+        <div class="panel-body">
+
+        <canvas id="bar" class="chart chart-bar" chart-data="data"
+          chart-labels="labels" chart-legend="true" chart-series="series"
+          chart-click="onClick" >
+        </canvas>
+
+        </div>
+      </div>
+   </div>
+
+</div>

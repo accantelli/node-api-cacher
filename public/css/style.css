@@ -1,0 +1,69 @@
+.custom-space {
+	padding: 3px 0px;
+}
+
+.custom-title {
+	font-family: "Courier New";
+	text-transform: uppercase;
+}
+
+/* bootstrap customization */
+
+.huge {
+	font-size: 20px;
+}
+
+.panel-red {
+    border-color: #d9534f;
+}
+
+.panel-red .panel-heading {
+    background-color: #d9534f;
+    border-color: #d9534f;
+    color: #fff;
+}
+
+.panel-green {
+    border-color: #5cb85c;
+}
+
+.panel-green .panel-heading {
+    background-color: #5cb85c;
+    border-color: #5cb85c;
+    color: #fff;
+}
+
+.panel-yellow {
+    border-color: #f0ad4e;
+}
+
+.panel-yellow .panel-heading {
+    background-color: #f0ad4e;
+    border-color: #f0ad4e;
+    color: #fff;
+}
+
+.navbar {
+    border-radius: 0px;
+}
+
+table th, table td {
+    border-collapse: collapse;
+    font-size : 90%;
+    font-family: "RobotoDraft","Roboto",sans-serif;
+}
+
+table thead th {
+    background: #B0BEC5;
+}
+
+html, body {
+    font-family: "RobotoDraft","Roboto",sans-serif;
+}
+
+/* form error message */ 
+.editable-error {
+    font-size: 90%;
+    color: red;
+    font-style: italic;    
+}

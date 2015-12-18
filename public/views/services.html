@@ -1,0 +1,75 @@
+<div class="container">
+   
+   <div class="row">
+      <h1>Services</h1>
+      <p>Define here your services.</p>
+      <p></p>
+   </div>
+
+   <div class="row">
+      <div class="panel panel-default">
+         <div class="panel-heading">Data</div>
+         <div class="panel-body">
+
+         <table class="table table-striped table-bordered table-condensed table-responsive">
+            <thead>
+               <tr>
+                  <th>key</th>
+                  <th>type</th>
+                  <th>value</th>
+                  <th>result type</th>
+                  <th>ttl</th>
+                  <th width="10%">edit</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr ng-show="!services.length"><td colspan="7">No items yet :(</td></tr>
+               <tr ng-repeat="item in services" >
+                  <td>
+                     <span editable-text="item.key" e-name="key" e-form="rowform" onbeforesave="checkKey($data, item.key)" e-required>
+                     {{ item.key }}</span></td>
+                  <td>
+                     <span editable-text="item.type" e-name="type" e-form="rowform" e-required>
+                     {{ item.type }}</span></td>   
+                  <td>
+                     <span editable-text="item.value" e-name="value" e-form="rowform" onbeforesave="checkValue($data, item.value)" e-required>
+                     {{ item.value }}</span></td>
+                  <td>
+                     <span editable-text="item.resultType" e-name="resultType" e-form="rowform" e-required>
+                     {{ item.resultType }}</span></td>
+                  <td>
+                     <span editable-text="item.ttl" e-name="ttl" e-form="rowform" onbeforesave="checkTTL($data, item.ttl)" e-required>
+                     {{ item.ttl }}</span></td>
+                  <td>
+                     
+                     <form editable-form name="rowform" onbeforesave="save($data, item._id)" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == item">
+              
+                        <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary btn-xs">
+                           <span class="glyphicon glyphicon glyphicon-ok" style="cursor:pointer" ></span><!-- save -->
+                        </button> 
+                        <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default btn-xs">
+                           <span class="glyphicon glyphicon-remove" style="cursor:pointer" ></span><!-- cancel -->
+                        </button>   
+
+                     </form>
+
+                     <div class="buttons" ng-show="!rowform.$visible">
+                        <span ng-click="rowform.$show()" class="glyphicon glyphicon-pencil" style="cursor:pointer" aria-hidden="true"></span><!-- edit -->
+                        <span ng-click="remove(item)" class="glyphicon glyphicon-trash" style="cursor:pointer" aria-hidden="true"></span><!-- delete -->
+                     </div> 
+
+                  </td>
+               </tr>
+
+            </tbody>
+         </table>
+         <button class="btn btn-primary btn-xs" ng-click="addRowElement()">Add new element</button>
+
+        </div>
+      </div>
+   </div>
+
+   
+   </div><!-- ./row -->
+   
+</div>
