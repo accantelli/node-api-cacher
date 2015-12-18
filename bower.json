@@ -24,7 +24,7 @@
     "angular-chart.js": "~0.8.5",
     "angular-route": "~1.4.7",
     "angular-xeditable": "~0.1.9",
-    "bootstrap": "~3.3.6"
+    "bootstrap": "~3.3.6",
     "font-awesome": "~4.4.0",
     "roboto-fontface": "~0.4.3",
     "toastr": "~2.1.2",
