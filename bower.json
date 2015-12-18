@@ -1,0 +1,33 @@
+{
+  "name": "node-api-cacher",
+  "version": "0.0.1",
+  "authors": [
+    "walter.accantelli <walter.accantelli@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "angular": "~1.4.8",
+    "angular-chart.js": "~0.8.5",
+    "angular-route": "~1.4.7",
+    "angular-xeditable": "~0.1.9",
+    "bootstrap": "~3.3.6"
+    "font-awesome": "~4.4.0",
+    "roboto-fontface": "~0.4.3",
+    "toastr": "~2.1.2",
+    "Chart.js": "~1.0.2"
+  }
+}

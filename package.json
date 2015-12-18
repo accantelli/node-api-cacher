@@ -1,0 +1,25 @@
+{
+  "name": "node-api-cacher",
+  "version": "0.0.1",
+  "description": "Node web cache proxy configurable",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "NodeJS",
+    "web",
+    "cache",
+    "proxy",
+    "configurable"
+  ],
+  "author": "Walter Accantelli",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "http": "0.0.0",
+    "nedb": "1.2.1",
+    "node-cache": "^3.0.0"
+  }
+}
